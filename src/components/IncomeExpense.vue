@@ -14,3 +14,16 @@
     </div>
   </section>
 </template>
+
+<script setup>
+const props = defineProps({
+  income: {
+    type: Number,
+    required: true
+  },
+  expense: {
+    type: Number,
+    required: true
+  }
+});
+</script>
