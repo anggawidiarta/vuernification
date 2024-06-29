@@ -23,7 +23,7 @@ const generateUniqueId = () => {
 
 <template>
   <div class="w-full">
-    <h3 class="font-semibold">History</h3>
+    <h3 class="text-xl font-semibold">History</h3>
     <ul id="list" class="list">
       <li
         v-for="transaction in transactions"
