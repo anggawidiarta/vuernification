@@ -1,6 +1,23 @@
-<script setup>
-import { defineProps } from 'vue';
+<template>
+  <div class="w-full">
+    <h3 class="text-xl font-semibold">History</h3>
+    <ul id="list" class="list">
+      <li
+        v-for="transaction in transactions"
+        :key="transaction.id"
+        :class="[transaction.amount < 0 ? 'minus' : 'plus']"
+      >
+        {{ transaction.text }}
+        <span>{{
+          transaction.amount < 0 ? '-$' + transaction.amount * -1.0 : '$' + transaction.amount
+        }}</span>
+        <button class="delete-btn" @click="deleteTransaction(transaction.id)">x</button>
+      </li>
+    </ul>
+  </div>
+</template>
 
+<script setup>
 defineProps({
   transactions: {
     type: Array,
@@ -13,29 +30,7 @@ const emit = defineEmits(['transactionDeleted']);
 const deleteTransaction = (id) => {
   emit('transactionDeleted', id);
 };
-
-const handleTransactionSubmitted = (transactionData) => {};
-
-const generateUniqueId = () => {
-  return Math.floor(Math.random() * 1000000000);
-};
 </script>
-
-<template>
-  <div class="w-full">
-    <h3 class="text-xl font-semibold">History</h3>
-    <ul id="list" class="list">
-      <li
-        v-for="transaction in transactions"
-        :key="transaction.id"
-        :class="[transaction.amount < 0 ? 'minus' : 'plus']"
-      >
-        {{ transaction.text }} <span>${{ transaction.amount }}</span>
-        <button class="delete-btn" @click="deleteTransaction(transaction.id)">x</button>
-      </li>
-    </ul>
-  </div>
-</template>
 
 <style scoped>
 .delete-btn:focus {

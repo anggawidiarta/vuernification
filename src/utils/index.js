@@ -3,5 +3,5 @@ export const generateUniqueId = () => {
 };
 
 export const saveTransactionsToLocalStorage = (object) => {
-  localStorage.setItem('transactions', JSON.stringify(object));
+  localStorage.setItem('transactions', JSON.stringify(object.value));
 };

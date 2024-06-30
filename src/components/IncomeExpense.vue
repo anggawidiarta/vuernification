@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <section
     class="flex w-full py-2 border border-black shadow-md justify-evenly hover:shadow-lg transition-all duration-150 shadow-gray-300"

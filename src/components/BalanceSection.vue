@@ -1,7 +1,15 @@
-<script setup></script>
 <template>
   <section class="w-full">
-    <div>Balance</div>
-    <div>$0.00</div>
+    <div class="text-xl font-semibold">Balance</div>
+    <div>${{ props.balance }}</div>
   </section>
 </template>
+
+<script setup>
+const props = defineProps({
+  balance: {
+    type: Number,
+    required: true
+  }
+});
+</script>

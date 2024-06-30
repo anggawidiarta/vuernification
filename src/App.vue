@@ -24,35 +24,11 @@ import AddTransaction from './components/AddTransaction.vue';
 
 const toast = useToast();
 
-const transactions = ref([
-  {
-    id: 1,
-    text: 'Flower',
-    amount: -20
-  },
-  {
-    id: 2,
-    text: 'Salary',
-    amount: 300
-  },
-  {
-    id: 3,
-    text: 'Book',
-    amount: -10
-  },
-  {
-    id: 4,
-    text: 'Camera',
-    amount: 150
-  },
-  {
-    id: 5,
-    text: 'Food',
-    amount: -20.15
-  }
-]);
+const transactions = ref([]);
 
-// console.log(transactions.value);
+// const logTransaction = computed(() => {
+//   return transactions.value;
+// });
 
 // get total balance
 const total = computed(() => {
@@ -69,6 +45,8 @@ const income = computed(() => {
     .toFixed(2);
 });
 
+console.log(income);
+
 // get expense
 const expense = computed(() => {
   return transactions.value
@@ -80,7 +58,7 @@ const expense = computed(() => {
 const handleTransactionDeleted = (id) => {
   transactions.value = transactions.value.filter((transaction) => transaction.id !== id);
 
-  saveTransactionsToLocalStorage(transactions.value);
+  saveTransactionsToLocalStorage(transactions);
 
   toast.success('Transaction deleted successfully!');
 };
@@ -92,7 +70,7 @@ const handleTransactionSubmitted = (transactionData) => {
     amount: transactionData.amount
   });
 
-  saveTransactionsToLocalStorage(transactions.value);
+  saveTransactionsToLocalStorage(transactions);
   toast.success('Transaction added successfully!');
 };
 </script>
