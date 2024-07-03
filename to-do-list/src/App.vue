@@ -1,16 +1,49 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import { onMounted, ref } from "vue";
+
+const text = ref("Hello World");
+const textInput = ref("test");
+const isActive = ref(false);
+const tasks = ref(["task 1", "task 2", "task 3"]);
+const newTask = ref("");
+
+const addTask = () => {
+  if (newTask.value.trim() !== "") {
+    tasks.value.push(newTask.value);
+    newTask.value = "";
+  }
+};
+
+onMounted(() => {
+  text.value = "Fucking World";
+});
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <p>{{ text }}</p>
+      <input type="text" v-model="textInput" />
+      <p>{{ textInput }}</p>
+      <button type="button" @click="isActive = !isActive">click</button>
+      <div v-if="isActive">fuck you</div>
+      <br />
+      <form action="" @submit.prevent="addTask">
+        <input type="text" v-model="newTask" />
+      </form>
 
-      <nav>
+      <li v-for="task in tasks" :key="task">{{ task }}</li>
+      <nav style="text-align: center; width: 100%">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
