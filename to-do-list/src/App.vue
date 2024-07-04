@@ -1,118 +1,82 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 
-const text = ref("Hello World");
-const textInput = ref("test");
-const isActive = ref(false);
-const tasks = ref(["task 1", "task 2", "task 3"]);
-const newTask = ref("");
+const jokes = ref("");
 
-const addTask = () => {
-  if (newTask.value.trim() !== "") {
-    tasks.value.push(newTask.value);
-    newTask.value = "";
-  }
+const getJokes = async () => {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  const res = await fetch("https://icanhazdadjoke.com/", config);
+  const data = await res.json();
+  jokes.value = data.joke;
 };
-
-onMounted(() => {
-  text.value = "Fucking World";
-});
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <p>{{ text }}</p>
-      <input type="text" v-model="textInput" />
-      <p>{{ textInput }}</p>
-      <button type="button" @click="isActive = !isActive">click</button>
-      <div v-if="isActive">fuck you</div>
-      <br />
-      <form action="" @submit.prevent="addTask">
-        <input type="text" v-model="newTask" />
-      </form>
-
-      <li v-for="task in tasks" :key="task">{{ task }}</li>
-      <nav style="text-align: center; width: 100%">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="container">
+    <h3 style="color: black">Don't Laugh Challenge</h3>
+    <div id="joke" class="joke">
+      {{ jokes ? jokes : "Jokes Will Placed Here" }}
     </div>
-  </header>
-
-  <RouterView />
+    <button id="jokeBtn" class="btn" @click="getJokes">Get Another Joke</button>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
   text-align: center;
-  margin-top: 2rem;
+  max-width: 100%;
+  width: 800px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+h3 {
+  margin: 0;
+  opacity: 0.5;
+  letter-spacing: 2px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.joke {
+  color: black;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 600px;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
+.btn {
+  background-color: #9f68e0;
+  color: #fff;
   border: 0;
+  border-radius: 10px;
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.btn:active {
+  transform: scale(0.98);
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.btn:focus {
+  outline: 0;
 }
 </style>
