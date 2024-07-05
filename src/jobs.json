@@ -1,0 +1,144 @@
+{
+  "trips": [
+    {
+      "id": "1",
+      "title": "Explore the Wonders of Paris",
+      "type": "Full Package",
+      "location": "Paris, France",
+      "description": "Experience the beauty and romance of Paris with our all-inclusive trip package. Visit iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
+      "price": "$2000 - $2500",
+      "company": {
+        "name": "Global Travels",
+        "description": "Global Travels is a leading travel agency offering curated travel experiences around the world. We ensure a seamless and memorable journey for our clients.",
+        "contactEmail": "contact@globaltravels.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Safari Adventure in Kenya",
+      "type": "Full Package",
+      "location": "Nairobi, Kenya",
+      "description": "Join us for an unforgettable safari adventure in Kenya. Witness the majestic wildlife in their natural habitat and explore the stunning landscapes of the Maasai Mara.",
+      "price": "$3000 - $3500",
+      "company": {
+        "name": "Wildlife Expeditions",
+        "description": "Wildlife Expeditions specializes in safari tours and wildlife adventures. Our experienced guides ensure a safe and thrilling experience for all our guests.",
+        "contactEmail": "contact@wildlifeexpeditions.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Beach Getaway in Bali",
+      "type": "Full Package",
+      "location": "Bali, Indonesia",
+      "description": "Relax and unwind on the beautiful beaches of Bali. Our package includes luxurious accommodations, spa treatments, and guided tours of the island's cultural sites.",
+      "price": "$1500 - $2000",
+      "company": {
+        "name": "Tropical Escapes",
+        "description": "Tropical Escapes offers exclusive beach vacations to some of the most beautiful destinations in the world. We provide a perfect blend of relaxation and adventure.",
+        "contactEmail": "contact@tropicalescapes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Cultural Tour of Japan",
+      "type": "Full Package",
+      "location": "Tokyo, Japan",
+      "description": "Immerse yourself in the rich culture and history of Japan. Our tour includes visits to ancient temples, traditional tea ceremonies, and modern attractions in Tokyo.",
+      "price": "$2500 - $3000",
+      "company": {
+        "name": "Cultural Journeys",
+        "description": "Cultural Journeys offers in-depth cultural tours to various destinations around the world. We provide unique experiences that connect travelers with local traditions and heritage.",
+        "contactEmail": "contact@culturaljourneys.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "5",
+      "title": "Adventure Trip to New Zealand",
+      "type": "Full Package",
+      "location": "Queenstown, New Zealand",
+      "description": "Get your adrenaline pumping with our adventure trip to New Zealand. Activities include bungee jumping, skydiving, and exploring the stunning landscapes of Queenstown.",
+      "price": "$3500 - $4000",
+      "company": {
+        "name": "Adventure Seekers",
+        "description": "Adventure Seekers specializes in adventure travel experiences. We offer thrilling activities and guided tours to some of the most exciting destinations on the planet.",
+        "contactEmail": "contact@adventureseekers.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Historical Tour of Rome",
+      "type": "Full Package",
+      "location": "Rome, Italy",
+      "description": "Discover the ancient history of Rome with our comprehensive tour package. Visit the Colosseum, Roman Forum, and Vatican City, and enjoy authentic Italian cuisine.",
+      "price": "$2000 - $2500",
+      "company": {
+        "name": "Heritage Tours",
+        "description": "Heritage Tours offers historical and cultural tours to some of the world's most iconic destinations. We provide expert guides and immersive experiences for our travelers.",
+        "contactEmail": "contact@heritagetours.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "7",
+      "title": "Northern Lights in Iceland",
+      "type": "Full Package",
+      "location": "Reykjavik, Iceland",
+      "description": "Witness the breathtaking Northern Lights in Iceland. Our package includes guided tours, hot springs visits, and a chance to explore the stunning Icelandic landscapes.",
+      "price": "$2500 - $3000",
+      "company": {
+        "name": "Aurora Adventures",
+        "description": "Aurora Adventures specializes in trips to see the Northern Lights. We provide expert guides and comfortable accommodations for an unforgettable experience.",
+        "contactEmail": "contact@auroraadventures.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Wine Tasting in Napa Valley",
+      "type": "Full Package",
+      "location": "Napa Valley, USA",
+      "description": "Indulge in a luxurious wine tasting experience in Napa Valley. Our package includes visits to renowned wineries, gourmet meals, and beautiful vineyard tours.",
+      "price": "$2000 - $2500",
+      "company": {
+        "name": "Vineyard Ventures",
+        "description": "Vineyard Ventures offers exclusive wine tasting tours in Napa Valley. We provide a perfect blend of luxury, relaxation, and culinary delights.",
+        "contactEmail": "contact@vineyardventures.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "9",
+      "title": "Skiing in the Swiss Alps",
+      "type": "Full Package",
+      "location": "Zermatt, Switzerland",
+      "description": "Hit the slopes with our skiing package in the Swiss Alps. Enjoy world-class skiing, luxurious accommodations, and breathtaking mountain views.",
+      "price": "$3000 - $3500",
+      "company": {
+        "name": "Alpine Adventures",
+        "description": "Alpine Adventures specializes in skiing and snowboarding trips to the Swiss Alps. We provide expert guides and top-notch services for an exhilarating experience.",
+        "contactEmail": "contact@alpineadventures.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "10",
+      "title": "Cruise to the Caribbean",
+      "type": "Full Package",
+      "location": "Caribbean Sea",
+      "description": "Set sail on a luxurious cruise to the Caribbean. Our package includes stops at beautiful islands, onboard entertainment, and gourmet dining experiences.",
+      "price": "$4000 - $4500",
+      "company": {
+        "name": "Oceanic Cruises",
+        "description": "Oceanic Cruises offers premium cruise experiences to exotic destinations. We provide top-notch amenities and unforgettable journeys on the high seas.",
+        "contactEmail": "contact@oceaniccruises.com",
+        "contactPhone": "555-555-5555"
+      }
+    }
+  ]
+}
