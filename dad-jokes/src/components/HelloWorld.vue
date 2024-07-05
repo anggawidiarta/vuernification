@@ -1,6 +1,10 @@
 <script setup lang="ts">
 defineProps<{
   msg: string;
+  textColor: {
+    type: String;
+    default: "black";
+  };
 }>();
 </script>
 
