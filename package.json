@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "server": "json-server --watch src/jobs.json --port 8000"
+    "server": "json-server --watch src/trips.json --port 8000"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
