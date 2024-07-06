@@ -11,7 +11,7 @@
           </figure>
           <div class="card-body">
             <h2 class="card-title">For Tourist</h2>
-            <p>Browse our guides to learn more about trip</p>
+            <p>Browse our guides to learn more about trip and trip plan</p>
             <div class="justify-end card-actions">
               <button class="btn btn-primary">Learn now!</button>
             </div>
