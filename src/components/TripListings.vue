@@ -5,9 +5,17 @@ import { RouterLink, useRoute } from "vue-router";
 import axios from "axios";
 import TripListing from "./TripListing.vue";
 
-defineProps({
+const props = defineProps({
+  title: {
+    type: String,
+    default: "Our Trips",
+  },
   limit: Number,
   showButton: {
+    type: Boolean,
+    default: false,
+  },
+  enableViewMore: {
     type: Boolean,
     default: false,
   },
@@ -16,11 +24,16 @@ defineProps({
 const state = reactive({
   trips: [],
   isLoading: true,
+  showAll: false,
 });
 
 const isActiveLink = (routePath) => {
   const route = useRoute();
   return route.path === routePath;
+};
+
+const toggleShowAll = () => {
+  state.showAll = !state.showAll;
 };
 
 onMounted(async () => {
@@ -31,7 +44,6 @@ onMounted(async () => {
     console.error(error);
   } finally {
     state.isLoading = false;
-    // console.log(state.trips);
   }
 });
 </script>
@@ -48,13 +60,29 @@ onMounted(async () => {
           'text-center',
         ]"
       >
-        Our Trips
+        {{ title }}
       </h2>
       <div v-if="state.isLoading">
         <span class="loading loading-dots loading-lg"></span>
       </div>
       <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <TripListing v-for="trip in state.trips" :key="trip.id" :trip="trip" />
+        <TripListing
+          v-for="(trip, index) in state.showAll
+            ? state.trips
+            : state.trips.slice(0, 3)"
+          :key="trip.id"
+          :trip="trip"
+        />
+      </div>
+      <div
+        v-if="
+          !state.isLoading && state.trips.length > 6 && props.enableViewMore
+        "
+        class="text-center mt-6"
+      >
+        <button @click="toggleShowAll" class="btn btn-primary">
+          {{ state.showAll ? "View Less" : "View More" }}
+        </button>
       </div>
     </div>
   </section>

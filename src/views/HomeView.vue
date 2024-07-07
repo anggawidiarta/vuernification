@@ -7,8 +7,11 @@ import TripListings from "@/components/TripListings.vue";
 
 <template>
   <main>
-    <HeroSection />
+    <HeroSection
+      title="Explore the World"
+      subtitle="Discover Your Next Adventure"
+    />
     <HomeCard />
-    <TripListings />
+    <TripListings title="Highlight Of Our Trips" />
   </main>
 </template>

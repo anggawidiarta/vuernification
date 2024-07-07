@@ -7,20 +7,21 @@ const isActiveLink = (routePath) => {
 </script>
 
 <template>
-  <nav class="w-full bg-black h-20">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="flex h-20 items-center justify-between">
+  <nav class="w-full h-20 bg-black">
+    <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
         <div
-          class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
+          class="flex items-center justify-center flex-1 md:items-stretch md:justify-start"
         >
           <!-- Logo -->
-          <RouterLink class="flex flex-shrink-0 items-center mr-4" to="/">
-            <img class="h-10 w-auto" :src="logo" alt="Vue Trips" />
-            <span class="hidden md:block text-white text-2xl font-bold ml-2"
-              >Vue Trips</span
+          <RouterLink class="flex items-center flex-shrink-0 mr-4" to="/">
+            <img class="w-auto h-10" :src="`/road-sign.png`" alt="Vue Trips" />
+            <span
+              class="hidden ml-2 text-2xl font-bold text-white transition-all duration-150 hover:text-blue-300 md:block"
+              >Travel Sana Sini</span
             >
           </RouterLink>
-          <div class="md:ml-auto">
+          <div class="h-full md:ml-auto">
             <div class="flex space-x-2">
               <RouterLink
                 to="/"

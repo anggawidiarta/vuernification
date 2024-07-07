@@ -1,7 +1,9 @@
 <template>
-  <div class="mx-auto max-w-7xl">
+  <div class="mx-auto max-w-7xl my-16">
     <div class="container m-auto">
-      <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 place-items-center">
+      <div
+        class="grid grid-cols-1 p-4 gap-y-5 lg:grid-cols-2 place-items-center"
+      >
         <div class="card glass w-96">
           <figure>
             <img

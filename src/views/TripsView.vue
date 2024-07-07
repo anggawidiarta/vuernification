@@ -3,5 +3,5 @@ import TripListings from "@/components/TripListings.vue";
 </script>
 
 <template>
-  <TripListings />
+  <TripListings :enable-view-more="true" />
 </template>

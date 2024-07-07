@@ -1,4 +1,17 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+    default: "Our Trip",
+  },
+  subtitle: {
+    type: String,
+    required: true,
+    default: "Our Trip",
+  },
+});
+</script>
 
 <template>
   <section class="py-20 mb-12 bg-blue-400">
@@ -9,9 +22,9 @@
         <h1
           class="text-4xl font-extrabold text-white sm:text-white sm:text-5xl md:text-6xl tracking-wide capitalize"
         >
-          title
+          {{ props.title }}
         </h1>
-        <p class="my-4 text-xl text-white">subtitle</p>
+        <p class="my-4 text-xl text-white">{{ props.subtitle }}</p>
       </div>
     </div>
   </section>

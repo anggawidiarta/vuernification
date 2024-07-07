@@ -22,6 +22,11 @@ const router = createRouter({
       name: "trips",
       component: () => import("../views/TripsView.vue"),
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "not-found",
+      component: () => import("../views/NotFoundView.vue"),
+    },
   ],
 });
 
