@@ -1,48 +1,6 @@
 {
   "trips": [
     {
-      "id": "1",
-      "title": "Explore the Wonders of Paris",
-      "type": "Full Package",
-      "location": "Paris, France",
-      "description": "Experience the beauty and romance of Paris with our all-inclusive trip package. Visit iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
-      "price": "$2000 - $2500",
-      "company": {
-        "name": "Global Travels",
-        "description": "Global Travels is a leading travel agency offering curated travel experiences around the world. We ensure a seamless and memorable journey for our clients.",
-        "contactEmail": "contact@globaltravels.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
-      "id": "2",
-      "title": "Safari Adventure in Kenya",
-      "type": "Full Package",
-      "location": "Nairobi, Kenya",
-      "description": "Join us for an unforgettable safari adventure in Kenya. Witness the majestic wildlife in their natural habitat and explore the stunning landscapes of the Maasai Mara.",
-      "price": "$3000 - $3500",
-      "company": {
-        "name": "Wildlife Expeditions",
-        "description": "Wildlife Expeditions specializes in safari tours and wildlife adventures. Our experienced guides ensure a safe and thrilling experience for all our guests.",
-        "contactEmail": "contact@wildlifeexpeditions.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
-      "id": "3",
-      "title": "Beach Getaway in Bali",
-      "type": "Full Package",
-      "location": "Bali, Indonesia",
-      "description": "Relax and unwind on the beautiful beaches of Bali. Our package includes luxurious accommodations, spa treatments, and guided tours of the island's cultural sites.",
-      "price": "$1500 - $2000",
-      "company": {
-        "name": "Tropical Escapes",
-        "description": "Tropical Escapes offers exclusive beach vacations to some of the most beautiful destinations in the world. We provide a perfect blend of relaxation and adventure.",
-        "contactEmail": "contact@tropicalescapes.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
       "id": "4",
       "title": "Cultural Tour of Japan",
       "type": "Full Package",
