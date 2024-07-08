@@ -23,9 +23,14 @@ const router = createRouter({
       component: () => import("../views/TripsView.vue"),
     },
     {
-      path: "/:pathMatch(.*)*",
+      path: "/:pathMatch(.*)",
       name: "not-found",
       component: () => import("../views/NotFoundView.vue"),
+    },
+    {
+      path: "/trips/:id",
+      name: "trip",
+      component: () => import("../views/TripView.vue"),
     },
   ],
 });
