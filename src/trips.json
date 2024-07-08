@@ -1,32 +1,18 @@
 {
   "trips": [
     {
-      "id": "4",
-      "title": "Cultural Tour of Japan",
-      "type": "Full Package",
-      "location": "Tokyo, Japan",
-      "description": "Immerse yourself in the rich culture and history of Japan. Our tour includes visits to ancient temples, traditional tea ceremonies, and modern attractions in Tokyo.",
-      "price": "$2500 - $3000",
-      "company": {
-        "name": "Cultural Journeys",
-        "description": "Cultural Journeys offers in-depth cultural tours to various destinations around the world. We provide unique experiences that connect travelers with local traditions and heritage.",
-        "contactEmail": "contact@culturaljourneys.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
-      "id": "5",
-      "title": "Adventure Trip to New Zealand",
-      "type": "Full Package",
+      "title": "Adventure Trip to New York",
+      "type": "Part-Time",
       "location": "Queenstown, New Zealand",
       "description": "Get your adrenaline pumping with our adventure trip to New Zealand. Activities include bungee jumping, skydiving, and exploring the stunning landscapes of Queenstown.",
-      "price": "$3500 - $4000",
+      "price": "$50K - $60K",
       "company": {
         "name": "Adventure Seekers",
         "description": "Adventure Seekers specializes in adventure travel experiences. We offer thrilling activities and guided tours to some of the most exciting destinations on the planet.",
         "contactEmail": "contact@adventureseekers.com",
         "contactPhone": "555-555-5555"
-      }
+      },
+      "id": "5"
     },
     {
       "id": "6",
@@ -43,18 +29,18 @@
       }
     },
     {
-      "id": "7",
-      "title": "Northern Lights in Iceland",
-      "type": "Full Package",
+      "title": "Northern Lombok",
+      "type": "Internship",
       "location": "Reykjavik, Iceland",
-      "description": "Witness the breathtaking Northern Lights in Iceland. Our package includes guided tours, hot springs visits, and a chance to explore the stunning Icelandic landscapes.",
-      "price": "$2500 - $3000",
+      "description": "lorem11",
+      "price": "$70K - $80K",
       "company": {
         "name": "Aurora Adventures",
         "description": "Aurora Adventures specializes in trips to see the Northern Lights. We provide expert guides and comfortable accommodations for an unforgettable experience.",
         "contactEmail": "contact@auroraadventures.com",
         "contactPhone": "555-555-5555"
-      }
+      },
+      "id": "7"
     },
     {
       "id": "8",
@@ -96,6 +82,34 @@
         "description": "Oceanic Cruises offers premium cruise experiences to exotic destinations. We provide top-notch amenities and unforgettable journeys on the high seas.",
         "contactEmail": "contact@oceaniccruises.com",
         "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "6e85",
+      "title": "PT Mencari Cinta Sejati",
+      "type": "Full-Time",
+      "location": "Bali",
+      "description": "Becareful For Beggar",
+      "price": "$50K - $60K",
+      "company": {
+        "name": "Wah Bangkrut",
+        "description": "Scam",
+        "contactEmail": "eziovseverybody@gmail.com",
+        "contactPhone": "082266504382"
+      }
+    },
+    {
+      "id": "10ff",
+      "title": "1231231",
+      "type": "Full-Time",
+      "location": "Bali1231",
+      "description": "asdasd",
+      "price": "$50K - $60K",
+      "company": {
+        "name": "asdasd",
+        "description": "asdasdasd",
+        "contactEmail": "anggawidiarta55@gmail.com",
+        "contactPhone": "082266504382"
       }
     }
   ]

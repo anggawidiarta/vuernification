@@ -32,6 +32,16 @@ const router = createRouter({
       name: "trip",
       component: () => import("../views/TripView.vue"),
     },
+    {
+      path: "/trips/add",
+      name: "add-trip",
+      component: () => import("../views/AddTripView.vue"),
+    },
+    {
+      path: "/trips/edit/:id",
+      name: "edit-trip",
+      component: () => import("../views/EditTripView.vue"),
+    },
   ],
 });
 

@@ -1,7 +1,7 @@
 <script setup>
-import { reactive } from "vue";
-import { useRouter } from "vue-router";
+import { reactive, onMounted } from "vue";
 import axios from "axios";
+import { useRouter, useRoute } from "vue-router";
 
 const form = reactive({
   title: "",
@@ -18,9 +18,11 @@ const form = reactive({
 });
 
 const router = useRouter();
+const route = useRoute();
+const id = route.params.id; // Get the trip ID from the route parameters
 
 const handleSubmit = async () => {
-  const newTrip = {
+  const updatedTrip = {
     title: form.title,
     type: form.type,
     location: form.location,
@@ -33,17 +35,32 @@ const handleSubmit = async () => {
       contactPhone: form.company.contactPhone,
     },
   };
-
   try {
-    const response = await axios.post("/api/trips", newTrip);
+    const response = await axios.put(`/api/trips/${id}`, updatedTrip);
+    console.log("Trip updated successfully");
     router.push(`/trips/${response.data.id}`);
-    console.log("Trip created successfully");
   } catch (error) {
     console.error(error);
   }
 };
-</script>
 
+onMounted(async () => {
+  try {
+    const response = await axios.get(`/api/trips/${id}`);
+    form.title = response.data.title;
+    form.type = response.data.type;
+    form.location = response.data.location;
+    form.description = response.data.description;
+    form.price = response.data.price;
+    form.company.name = response.data.company.name;
+    form.company.description = response.data.company.description;
+    form.company.contactEmail = response.data.company.contactEmail;
+    form.company.contactPhone = response.data.company.contactPhone;
+  } catch (error) {
+    console.error(error);
+  }
+});
+</script>
 <template>
   <section class="bg-green-50">
     <div class="container m-auto max-w-2xl py-24">
@@ -51,7 +68,7 @@ const handleSubmit = async () => {
         class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
       >
         <form @submit.prevent="handleSubmit">
-          <h2 class="text-3xl text-center font-semibold mb-6">Add Trip</h2>
+          <h2 class="text-3xl text-center font-semibold mb-6">Edit Trip</h2>
 
           <div class="mb-4">
             <label for="type" class="block text-gray-700 font-bold mb-2"
@@ -206,7 +223,7 @@ const handleSubmit = async () => {
               class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
               type="submit"
             >
-              Add Trip
+              Update Trip
             </button>
           </div>
         </form>
