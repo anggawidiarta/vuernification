@@ -40,6 +40,7 @@ const truncatedDescription = computed(() => {
           {{ truncatedDescription }}
         </div>
         <button
+          v-if="props.trip.description.length > 100"
           @click="toggleFullDescription"
           class="mb-5 text-green-500 hover:text-green-600"
         >

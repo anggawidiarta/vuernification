@@ -15,20 +15,6 @@
       "id": "5"
     },
     {
-      "id": "6",
-      "title": "Historical Tour of Rome",
-      "type": "Full Package",
-      "location": "Rome, Italy",
-      "description": "Discover the ancient history of Rome with our comprehensive tour package. Visit the Colosseum, Roman Forum, and Vatican City, and enjoy authentic Italian cuisine.",
-      "price": "$2000 - $2500",
-      "company": {
-        "name": "Heritage Tours",
-        "description": "Heritage Tours offers historical and cultural tours to some of the world's most iconic destinations. We provide expert guides and immersive experiences for our travelers.",
-        "contactEmail": "contact@heritagetours.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
       "title": "Northern Lombok",
       "type": "Internship",
       "location": "Reykjavik, Iceland",
